@@ -48,6 +48,3 @@ export default tseslint.config({
   },
 })
 ```
-react 1.2 Компоненти основи
-      1.3 Базові та модульні стилі
-      1.4 Tailwind
