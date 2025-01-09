@@ -48,3 +48,6 @@ export default tseslint.config({
   },
 })
 ```
+Lesson2
+2.1 useState (події, ф-ція хук)
+2.2 useEffect fetch
