@@ -49,3 +49,4 @@ export default tseslint.config({
 })
 ```
 Lesson 2.2 UseEffect fetch
+Lesson 2.3 Services
