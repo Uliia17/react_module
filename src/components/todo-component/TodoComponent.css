@@ -1,0 +1,17 @@
+.complete{
+    background: aqua;
+}
+.noncomplete{
+background: indianred;
+}
+.todo-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    border: gray solid 1px;
+}
+.todo-item p {
+    margin: 0;
+    font-size: 1.1em;
+}
