@@ -1,15 +1,15 @@
 import {useEffect, useState} from 'react';
 import {ITodo} from "../../models/ITodo.ts";
 import TodoComponent from "../todo-component/TodoComponent.tsx";
-import {getTodos} from "../../services/api.service.ts";
+import {getAllTodos} from "../../services/api.service.ts";
 
 const TodoComponents = () => {
     const [todos, setTodos] = useState<ITodo[]>([]);
     useEffect(() => {
-        getTodos()
-            .then(response => {
-                setTodos(response);
-            });
+        getAllTodos().then(({ todos }) => {
+            console.log(todos);
+            setTodos(todos);
+        });
     }, []);
 
     return (

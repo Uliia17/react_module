@@ -1,6 +1,6 @@
-import {ITodo} from "../models/ITodo.ts";
+import {ITodojson} from "../models/ITodojson.ts";
 
-const getTodos = async ():Promise<ITodo []> => {
+const getAllTodos = async ():Promise<ITodojson> => {
 
     const mainUrl = import.meta.env.VITE_API_URL;
     return await fetch(mainUrl)
@@ -8,5 +8,5 @@ const getTodos = async ():Promise<ITodo []> => {
 }
 
 export {
-    getTodos
+    getAllTodos
 }
