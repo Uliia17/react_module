@@ -48,3 +48,4 @@ export default tseslint.config({
   },
 })
 ```
+Lesson3.1 basic router маршрутизація
