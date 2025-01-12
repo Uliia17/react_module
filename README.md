@@ -48,3 +48,4 @@ export default tseslint.config({
   },
 })
 ```
+3.2 router demo
