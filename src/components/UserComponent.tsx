@@ -15,8 +15,9 @@ export const UserComponent:FC<Props> = ({user}) => {
 
     return (
         <div>
-            {user.username}: {user.email}
-            <button className={"border-2"} onClick={onButtonClick}>put on</button>
+            <h3 className="font-bold">{user.username}</h3>
+            <p>Email: <span>{user.email}</span></p>
+            <button className="mt-2 px-4 bg-gray-300" onClick={onButtonClick}>put on</button>
         </div>
     );
 }
