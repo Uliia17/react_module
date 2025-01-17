@@ -48,3 +48,4 @@ export default tseslint.config({
   },
 })
 ```
+Lesson 4.1 pagination
