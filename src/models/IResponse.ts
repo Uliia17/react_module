@@ -1,11 +1,8 @@
 import {IUser} from "./IUser.ts";
-import {ISupport} from "./ISupport.ts";
 
 export interface IResponse {
-  page: number;
-  per_page: number;
+  users: IUser[];
   total: number;
-  total_pages: number;
-  data: IUser[];
-  support: ISupport;
+  skip: number;
+  limit: number;
 }

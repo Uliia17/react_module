@@ -12,7 +12,7 @@ export const PaginationComponent = () => {
                     let currentPage = +pg;
                     setQuery({pg:(--currentPage).toString()});
                 }
-            }}>prev</button>
+            }}>Before</button>
             <button onClick={() => {
                 const pg = query.get('pg');
                 if (pg)
@@ -20,7 +20,7 @@ export const PaginationComponent = () => {
                    let currentPage = +pg;
                    setQuery({pg:(++currentPage).toString()});
                }
-            }}>next</button>
+            }}>Next</button>
       </div>
     );
 };

@@ -1,8 +1,8 @@
 import {useEffect, useState} from "react";
 import {useSearchParams} from "react-router-dom";
-import {IUser} from "../../models/IUser.ts";
 import {getAllUsers} from "../../services/api.service.ts";
 import UserComponent from "../user/UserComponent.tsx";
+import {IUser} from "../../models/IUser.ts";
 
 export const UsersComponent = () => {
     const [users, setUsers] = useState<IUser[]>([]);
@@ -10,7 +10,7 @@ export const UsersComponent = () => {
     const [query] = useSearchParams();
     useEffect(() => {
     getAllUsers(query.get('pg') || '')
-        .then(value => setUsers(value.data));
+        .then(value => setUsers(value.users));
     }, [query]);
 
     return (
