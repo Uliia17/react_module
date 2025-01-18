@@ -48,7 +48,7 @@ const FormComponent = () => {
         <div>
             <form onSubmit={handleSubmit}>
                 <input type="text" name={'username'} value={formState.username} onChange={handleInputChange}/>
-                <input type="text" name={'password'} value={formState.password}onChange={handleInputChange}/>
+                <input type="text" name={'password'} value={formState.password} onChange={handleInputChange}/>
                 <button>send</button>
             </form>
         </div>
