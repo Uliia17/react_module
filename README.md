@@ -48,3 +48,4 @@ export default tseslint.config({
   },
 })
 ```
+Lesson 5 uncontrolled form (компонент)
