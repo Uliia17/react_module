@@ -1,0 +1,11 @@
+.pagination-button {
+    background-color: lightseagreen;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    margin: 0 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: clip;
+}
+

@@ -1,6 +1,7 @@
-import {IResponse} from "../models/IResponse.ts";
+import { IResponse } from "../models/IResponse";
+import { urls } from "../constants/urls";
 
-export const getAllUsers = async (pg:string):Promise<IResponse> => {
-    return await fetch('https://dummyjson.com/users?skip='+pg)
-        .then(value => value.json())
-}
+export const getAllUsers = async (pg: string): Promise<IResponse> => {
+    const response = await fetch(urls.users.allUsers(pg));
+    return await response.json();
+};
