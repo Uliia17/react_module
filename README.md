@@ -48,4 +48,4 @@ export default tseslint.config({
   },
 })
 ```
-Lesson 5.3 useForm base validation
+Lesson 5.4 useForm joi
