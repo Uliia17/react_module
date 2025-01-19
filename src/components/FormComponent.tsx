@@ -11,11 +11,12 @@ const FormComponent = () => {
     // console.log(useForm1);
     console.log(register('username'));
 
+    const newVar = (formData: IFormProps) => {
+        console.log(formData);
+    };
     return (
         <div>
-            <form onSubmit={handleSubmit((formData) => {
-                console.log(formData);
-            })}>
+            <form onSubmit={handleSubmit(newVar)}>
                 <input type="text" {...register('username')}/>
                 <input type="text" {...register('password')}/>
                 <input type="number" {...register('age')}/>
