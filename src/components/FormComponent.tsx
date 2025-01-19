@@ -1,5 +1,7 @@
 import {useForm} from "react-hook-form";
-import {userValidator} from "../validators/user.validator.ts";
+import userValidator from "../validators/user.validator.ts";
+import {joiResolver} from '@hookform/resolvers/joi';
+
 
 interface IFormProps {
     username:string,
@@ -12,7 +14,7 @@ const FormComponent = () => {
            register,
            formState: {errors, isValid}
     } = useForm<IFormProps>({
-        mode: 'all', resolver: JoiResolver(userValidator)
+        mode: 'all', resolver: joiResolver(userValidator)
     });
 
 
