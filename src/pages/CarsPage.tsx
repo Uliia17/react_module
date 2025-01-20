@@ -1,17 +1,10 @@
-import {useEffect} from "react";
-import {getAllCars} from "../services/api.service.tsx";
+import CarsComponent from "../components/CarsComponent.tsx";
 
 const CarsPage = () => {
 
-    useEffect(() => {
-        getAllCars().then(() => {
-
-        })
-    }, []);
-
     return (
         <div>
-
+            <CarsComponent/>
         </div>
     );
 };

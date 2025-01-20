@@ -1,0 +1,11 @@
+.carContainer {
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 16px;
+    margin: 10px 0;
+}
+
+.carDetails {
+    font-size: 18px;
+    color: black;
+}

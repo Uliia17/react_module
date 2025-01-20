@@ -1,0 +1,25 @@
+.formContainer {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid white;
+    border-radius: 5px;
+}
+
+.inputField {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid gray;
+    border-radius: 4px;
+}
+
+.submitButton {
+    background-color: lightseagreen;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
