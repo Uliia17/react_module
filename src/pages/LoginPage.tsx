@@ -3,8 +3,8 @@ import {login} from "../services/api.service.ts";
 
 export const LoginPage = () => {
 
-    useEffect(() => {
-        login({
+    useEffect(() => {// хук виконує дію логінації
+        login({// передає дані, які взяли з https://dummyjson.com/
             username: 'emilys',
             password: 'emilyspass',
             expiresInMins: 1

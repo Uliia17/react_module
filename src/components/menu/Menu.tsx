@@ -1,7 +1,7 @@
 import {Link} from "react-router-dom";
 
-const Menu = () => {
-    return (
+const Menu = () => {// відображає список навігаційних посилань
+        return (// посилання на сторінки
         <div>
             <ul>
                 <li><Link to={'/'}>home</Link></li>

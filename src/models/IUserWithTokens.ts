@@ -1,4 +1,4 @@
-export interface IUserWithTokens {
+export interface IUserWithTokens {// модель об'єкта користувача з токенами
   id: number;
   username: string;
   email: string;

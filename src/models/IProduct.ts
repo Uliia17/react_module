@@ -19,7 +19,7 @@ export interface Meta {
   qrCode: string;
 }
 
-export interface IProduct {
+export interface IProduct {// модель об'єкта користувача
   id: number;
   title: string;
   description: string;

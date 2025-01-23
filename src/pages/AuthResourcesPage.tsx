@@ -3,13 +3,13 @@ import {loadAuthProducts, refresh} from "../services/api.service.ts";
 
 export const AuthResourcesPage = () => {
 
-    useEffect(() => {
-        loadAuthProducts().then(products => {
+    useEffect(() => {// хук, який отримує дані із сервера (отримуємо список продуктів)
+        loadAuthProducts().then(products => {// функція, яка виконує запит на отримання продуктів для авторизованих користувачей
             console.log(products)
-        }).catch(reason => {
+        }).catch(reason => {// необхідно, якщо виникає помилка
             console.log(reason);
-            refresh()
-                .then(() => loadAuthProducts())
+            refresh()// функція, яка оновлює токен
+                .then(() => loadAuthProducts())// повертає проміс, якщо запит успішний, то отримаємо продукти
                 .then(value => console.log(value))
         });
     }, []);
