@@ -1,15 +1,14 @@
 import {useContext} from "react";
-import {MyContext} from "../context/MyContext.tsx";
+import {ThemeContext} from "../context/MyContext";
 
 const LeftBranchA = () => {
-    const {counterValue} = useContext(MyContext);
+    const {theme} = useContext(ThemeContext);
 
     return (
-        <div>
+        <div style={{
+            background: theme === "light" ? "pink" : "gray",
+            color: theme === "light" ? "black" : "white", }}>
             Left branch A
-            <p>
-                current counter value is {counterValue}
-            </p>
         </div>
     );
 };

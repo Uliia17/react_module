@@ -1,10 +1,10 @@
-import RightBranchA from "./RightBranchA.tsx";
+import RightBranchA from "./RightBranchA";
 
 const RightBranch = () => {
     return (
         <div>
-            Right branch
-            <RightBranchA/>
+            <h2>Right branch</h2>
+            <RightBranchA />
         </div>
     );
 };

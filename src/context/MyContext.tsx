@@ -1,14 +1,27 @@
-import {createContext} from "react";
+import {createContext, useState, ReactNode} from "react";
 
-type ContextType ={
-    counterValue: number,
-    increment: (obj:number) => void
-}
-
-export const init = {
-    counterValue: 0,
-    increment: (obj: number) => {
-        console.log(obj);
-    }
+type ThemeContextType = {
+    theme: string;
+    changeTheme: () => void;
 };
-export const MyContext = createContext<ContextType>(init);
+
+export const ThemeContext = createContext<ThemeContextType>({
+    theme: "light",
+    changeTheme: () => {},
+});
+
+export const ThemeProvider = ({children}: {children: ReactNode}) => {
+    const [theme, setTheme] = useState<string>("light");
+
+    const changeTheme = () => {
+        setTheme((prev) => (prev === "light" ? "dark" : "light"));
+    };
+
+    return (
+        <ThemeContext.Provider value={{theme, changeTheme}}>
+            {children}
+        </ThemeContext.Provider>
+    );
+};
+
+

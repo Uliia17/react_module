@@ -1,26 +1,17 @@
-import './App.css'
-import LeftBranch from "./components/LeftBranch.tsx";
-import RightBranch from "./components/RightBranch.tsx";
-import {init, MyContext} from "./context/MyContext.tsx";
-import {useState} from "react";
+import LeftBranch from "./components/LeftBranch";
+import RightBranch from "./components/RightBranch";
+import {ThemeProvider} from "./context/MyContext";
 
 function App() {
-  const [counter, setCounter] = useState<number>(init.counterValue);
-
-  return (
-      <div>
-        <MyContext.Provider value={{
-          counterValue: counter,
-          increment: (obj: number) => {
-            setCounter(obj + 1);
-            console.log(obj);
-          }
-        }}>
-          <LeftBranch/>
-          <RightBranch/>
-        </MyContext.Provider>
-      </div>
-  )
+    return (
+        <ThemeProvider>
+            <div>
+                <LeftBranch/>
+                <RightBranch/>
+            </div>
+        </ThemeProvider>
+    );
 }
 
-export default App
+export default App;
+

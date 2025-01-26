@@ -1,15 +1,15 @@
 import {useContext} from "react";
-import {MyContext} from "../context/MyContext.tsx";
+import {ThemeContext} from "../context/MyContext";
 
 const RightBranchA = () => {
-    const {counterValue, increment} = useContext(MyContext);
-    
+    const {theme, changeTheme} = useContext(ThemeContext);
+
     return (
-        <div>
+        <div style={{
+            background: theme === "light" ? "pink" : "gray",
+            color: theme === "light" ? "black" : "white", }}>
             Right branch A
-            <button onClick={() => { 
-              increment(counterValue);
-            }}>click me to increment counter in LBA</button>
+            <button onClick={changeTheme}>Change Theme</button>
         </div>
     );
 };
