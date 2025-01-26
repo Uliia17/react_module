@@ -48,4 +48,4 @@ export default tseslint.config({
   },
 })
 ```
-Lesson 7.3 useMemo
+Lesson 7.4 customHooks
