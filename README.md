@@ -48,4 +48,4 @@ export default tseslint.config({
   },
 })
 ```
-Lesson 7.3 useMemo
+1. Відтворити і запам'ятати процедуру використання useCallback, useMemo, memo. Описати кожен рядок що і навіщо робить
