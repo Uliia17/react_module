@@ -48,5 +48,4 @@ export default tseslint.config({
   },
 })
 ```
-Lesson 7.1 lifecycle memo
-Lesson 7.2 useCallback
+Lesson 7.3 useMemo
