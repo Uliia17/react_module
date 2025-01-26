@@ -48,3 +48,4 @@ export default tseslint.config({
   },
 })
 ```
+Lesson 7.5 context
