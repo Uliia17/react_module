@@ -48,4 +48,4 @@ export default tseslint.config({
   },
 })
 ```
-3.2 router demo
+Lesson 8.1 redux
