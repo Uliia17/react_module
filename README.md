@@ -48,4 +48,4 @@ export default tseslint.config({
   },
 })
 ```
-Lesson 8.1 redux asyncThunk
+Lesson 8.3 redux 
