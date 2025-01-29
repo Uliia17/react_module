@@ -1,12 +1,17 @@
-import {IUser} from "../models/IUser.ts";
-import {urls} from "../constants/urls.ts";
+import { IUser } from "../models/IUser.ts";
+import { IPost } from "../models/IPost.ts";
+import { urls } from "../constants/urls.ts";
+import {IComment} from "../models/IComment.ts";
 
-export const userService = {
-    getUsers: async ():Promise<IUser[]> => {
-        return await fetch(urls.users.allUsers)
-    .then(value => value.json())
- },
-    getUser: async (id:number) => {
-        return await fetch(urls.users.byId(id))
-            .then(value => value.json())
- }}
+const createService = <T>(url: { all: string; byId: (id: number) => string }) => ({
+    getAll: async (): Promise<T[]> => {
+        return await fetch(url.all).then(value => value.json());
+    },
+    getById: async (id: number): Promise<T> => {
+        return await fetch(url.byId(id)).then(value => value.json());
+    }
+});
+
+export const userService = createService<IUser>(urls.users);
+export const postService = createService<IPost>(urls.posts);
+export const commentService = createService<IComment>(urls.comments);

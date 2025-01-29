@@ -1,13 +1,16 @@
 const baseURL = 'https://jsonplaceholder.typicode.com';
+
+const createUrl = (endpoint: string) => ({
+    all: `${baseURL}/${endpoint}`,
+    byId: (id: number) => `${baseURL}/${endpoint}/${id}`
+});
+
 const urls = {
-    users:{
-        allUsers:baseURL+'/users',
-        byId:(id:number) => {
-            return baseURL+'/'+ id;
-        }
-    },
-    posts:{}
-}
+    users: createUrl('users'),
+    posts: createUrl('posts'),
+    comments: createUrl('comments')
+};
+
 export {
     urls
-}
+};

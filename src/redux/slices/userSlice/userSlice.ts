@@ -1,6 +1,7 @@
 import {IUser} from "../../../models/IUser.ts";
 import {createAsyncThunk, createSlice, isFulfilled, isRejected, PayloadAction} from "@reduxjs/toolkit";
 import {urls} from "../../../constants/urls.ts";
+import {userService} from "../../../services/api.service.ts";
 
 type userSliceType = {
     users: IUser[]
@@ -8,14 +9,13 @@ type userSliceType = {
     loadState: boolean
     }
 
-const initialState: userSliceType = {users:[], user:null, loadState:false};
+const initialUserState:userSliceType = {users:[], user:null, loadState:false};
 
 const loadUsers = createAsyncThunk('userSlice/loadUsers',
     async (_, thunkAPI) => {
 
     try {
-        const users = await fetch(urls.users.allUsers)
-            .then(value => value.json());
+        const users = await userService.getAll();
         // thunkAPI.dispatch(userSliceActions.changeLoadState(true));
 
         return thunkAPI.fulfillWithValue(users);
@@ -29,9 +29,8 @@ const loadUser = createAsyncThunk('userSlice/loadUser',
     async (id:string, thunkAPI) => {
 
         try {
-            const user = await fetch(`${urls.users.allUsers}/${id}`)
+            const user = await fetch(`${urls.users.byId(Number(id))}`)
                 .then(value => value.json());
-            // thunkAPI.dispatch(userSliceActions.changeLoadState(true));
 
             return thunkAPI.fulfillWithValue(user);
             // throw new Error();
@@ -42,7 +41,7 @@ const loadUser = createAsyncThunk('userSlice/loadUser',
 
 export const userSlice = createSlice({
     name: "userSlice",
-    initialState: initialState,
+    initialState: initialUserState,
     reducers: {
         changeLoadState: (state, action:PayloadAction<boolean>) => {
 state.loadState = action.payload;
